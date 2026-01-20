@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vaibhav Gupta | SEO Analyst & Digital Marketer</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #1f2937;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      background: #fff;
+      box-shadow: 0 25px 80px rgba(0,0,0,.25);
+    }
+
+    header {
+      padding: 70px 40px;
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+    }
+
+    header h1 { font-size: 48px; font-weight: 800; }
+    header p { margin-top: 10px; font-size: 20px; opacity: .95; }
+
+    .links {
+      margin-top: 25px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,.3);
+      font-size: 14px;
+      transition: .3s;
+    }
+
+    .links a:hover {
+      background: #fff;
+      color: #667eea;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: #f9fafb;
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 100;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      padding: 14px 18px;
+      text-decoration: none;
+      color: #374151;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    nav a:hover { color: #667eea; }
+
+    section {
+      padding: 70px 40px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg,#667eea,#764ba2);
+      border-radius: 5px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      margin-bottom: 25px;
+      border-left: 4px solid #667eea;
+    }
+
+    .muted { color: #6b7280; }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 25px;
+    }
+
+    .skill-box {
+      background: #f9fafb;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 3px solid #764ba2;
+      font-size: 14px;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+      gap: 20px;
+    }
+
+    .metric {
+      text-align: center;
+      padding: 25px;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 8px 25px rgba(0,0,0,.08);
+      border-top: 4px solid #667eea;
+    }
+
+    .metric h3 { font-size: 36px; color: #667eea; }
+
+    footer {
+      background: #0f172a;
+      color: #fff;
+      text-align: center;
+      padding: 50px 30px;
+    }
+
+    footer a {
+      color: #93c5fd;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    @media(max-width:768px){
+      header h1 { font-size: 34px; }
+      section { padding: 50px 25px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+  <h1>Vaibhav Gupta</h1>
+  <p>SEO Analyst & Data-Driven Digital Marketer</p>
+  <p class="muted">📍 Ahmedabad, India</p>
+
+  <div class="links">
+    <a href="mailto:vaibhavgupta7574@gmail.com">Email</a>
+    <a href="tel:+917574941273">Phone</a>
+    <a href="https://www.linkedin.com/in/vaibhav-gupta-/" target="_blank">LinkedIn</a>
+    <a href="https://x.com/gupta05_vaibhav" target="_blank">Twitter / X</a>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">SEO Work</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#metrics">Metrics</a></li>
+    <li><a href="#certs">Certifications</a></li>
+  </ul>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      I’m an SEO Analyst with 2.5+ years of hands-on experience driving organic growth through
+      keyword research, technical SEO, content optimization, and performance tracking.
+      I specialize in building scalable, search-first strategies aligned with modern
+      AI-driven search experiences (SGE & AI Overviews).
+    </p>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Professional Experience</h2>
+
+  <div class="card">
+    <h3>SEO Analyst — WrapPixel</h3>
+    <p class="muted">July 2024 – Present</p>
+    <ul>
+      <li>Keyword research & SERP analysis for SaaS UI & dashboard content</li>
+      <li>On-page optimization, internal linking & metadata improvements</li>
+      <li>Technical SEO audits (indexing, crawl, performance)</li>
+      <li>SEO content creation aligned with search intent</li>
+      <li>Performance tracking via GA4 & Google Search Console</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Digital Marketing Executive — Amulya Mica</h3>
+    <p class="muted">July 2023 – June 2024</p>
+    <ul>
+      <li>On-page, off-page & technical SEO analysis</li>
+      <li>SEO recommendations for traffic & visibility growth</li>
+      <li>Email marketing & landing page optimization</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Marketing Intern — Krup Music</h3>
+    <p class="muted">Jan 2023 – May 2023</p>
+    <ul>
+      <li>Keyword research using Ahrefs & Google Keyword Planner</li>
+      <li>Backlink outreach & authority building support</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>SEO Projects & Work</h2>
+
+  <div class="card">
+    <h3>WrapPixel Blog SEO</h3>
+    <p>
+      Optimized long-form blog content targeting competitive UI, dashboard, and frontend
+      keywords. Improved search visibility through internal linking, content refresh,
+      and technical fixes.
+    </p>
+    <p class="muted">Metrics anonymized / blurred for confidentiality</p>
+  </div>
+
+  <div class="card">
+    <h3>ShadcnSpace & Tailwind Admin</h3>
+    <p>
+      Early-stage SEO execution including keyword targeting, site structure improvements,
+      and backlink-led authority building for developer-focused platforms.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Authority Content Distribution</h3>
+    <p>
+      Published SEO & dev-focused content on Dev.to, Medium, and Peerlist to build backlinks,
+      topical authority, and brand visibility.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills & Tools</h2>
+
+  <div class="skills">
+    <div class="skill-box">Keyword Research & SERP Intent</div>
+    <div class="skill-box">On-Page SEO & Content Optimization</div>
+    <div class="skill-box">Technical SEO & Audits</div>
+    <div class="skill-box">Link Building & Off-Page SEO</div>
+    <div class="skill-box">GA4 & Google Search Console</div>
+    <div class="skill-box">Ahrefs, SEMrush, Ubersuggest</div>
+    <div class="skill-box">AI Search Optimization (SGE)</div>
+    <div class="skill-box">SEO Content Writing & Blogging</div>
+  </div>
+</section>
+
+<section id="metrics">
+  <h2>Key Metrics</h2>
+
+  <div class="metrics">
+    <div class="metric"><h3>2.5+</h3><p>Years Experience</p></div>
+    <div class="metric"><h3>50+</h3><p>Pages Optimized</p></div>
+    <div class="metric"><h3>10+</h3><p>Websites Worked On</p></div>
+    <div class="metric"><h3>100+</h3><p>Keywords Tracked</p></div>
+  </div>
+</section>
+
+<section id="certs">
+  <h2>Certifications</h2>
+
+  <div class="card">Google Analytics Certification</div>
+  <div class="card">HubSpot Digital Marketing</div>
+  <div class="card">Google Digital Garage – Digital Marketing</div>
+  <div class="card">DMI – Social Media & Digital Marketing</div>
+</section>
+
+</div>
+
+<footer>
+  <h3>Let’s Work Together</h3>
+  <p>Open to SEO roles, freelance projects & growth collaborations</p>
+  <p>
+    <a href="https://www.linkedin.com/in/vaibhav-gupta-/" target="_blank">LinkedIn</a> |
+    <a href="mailto:vaibhavgupta7574@gmail.com">Email</a>
+  </p>
+  <p style="opacity:.6;margin-top:10px;">© 2026 Vaibhav Gupta</p>
+</footer>
+
+<script>
+  document.querySelectorAll('nav a').forEach(link=>{
+    link.addEventListener('click',e=>{
+      e.preventDefault();
+      document.querySelector(link.getAttribute('href'))
+        .scrollIntoView({behavior:'smooth'});
+    });
+  });
+</script>
+
+</body>
+</html>

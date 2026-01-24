@@ -1,273 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vaibhav Gupta | SEO Analyst & Digital Marketer</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Vaibhav Gupta | SEO Analyst & Digital Marketer</title>
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    body {
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      color: #1f2937;
-      line-height: 1.7;
+<style>
+:root{
+  --accent:#667eea;
+  --accent2:#764ba2;
+  --bg:#ffffff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --border:#e5e7eb;
+}
+body.dark{
+  --bg:#0f172a;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --card:#020617;
+  --border:#1f2937;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Inter,system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.75;
+  transition:.3s;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  background:var(--bg);
+  box-shadow:0 25px 80px rgba(0,0,0,.15);
+}
+
+/* HEADER */
+header{
+  padding:80px 40px;
+  text-align:center;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#fff;
+}
+header h1{font-size:48px;font-weight:800}
+header p{margin-top:10px;font-size:20px;opacity:.95}
+
+.links{
+  margin-top:25px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.links a{
+  color:#fff;
+  border:1px solid rgba(255,255,255,.3);
+  padding:8px 16px;
+  border-radius:30px;
+  font-size:14px;
+  text-decoration:none;
+}
+.links a:hover{background:#fff;color:var(--accent)}
+
+/* TOGGLE */
+.toggle{
+  position:fixed;
+  top:15px;
+  right:20px;
+  background:#fff;
+  color:#111;
+  padding:8px 14px;
+  border-radius:30px;
+  font-size:13px;
+  cursor:pointer;
+  z-index:999;
+}
+body.dark .toggle{background:#020617;color:#fff}
+
+/* NAV */
+nav{
+  position:sticky;
+  top:0;
+  background:var(--bg);
+  border-bottom:1px solid var(--border);
+  z-index:100;
+}
+nav ul{
+  display:flex;
+  justify-content:center;
+  list-style:none;
+  flex-wrap:wrap;
+}
+nav a{
+  padding:14px 18px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  color:var(--text);
+}
+nav a.active{color:var(--accent)}
+
+/* SECTIONS */
+section{
+  padding:70px 40px;
+  border-bottom:1px solid var(--border);
+}
+h2{
+  font-size:32px;
+  margin-bottom:30px;
+  position:relative;
+}
+h2::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-10px;
+  width:60px;
+  height:4px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  border-radius:5px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:14px;
+  padding:28px;
+  margin-bottom:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  border-left:4px solid var(--accent);
+}
+
+
+.skills {
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+gap: 25px;
     }
 
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      background: #fff;
-      box-shadow: 0 25px 80px rgba(0,0,0,.25);
+
+.skill-box {
+background: #f9fafb;
+padding: 20px;
+border-radius: 10px;
+border-left: 3px solid #764ba2;
+font-size: 14px;
     }
 
-    header {
-      padding: 70px 40px;
-      text-align: center;
-      color: #fff;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-    }
 
-    header h1 { font-size: 48px; font-weight: 800; }
-    header p { margin-top: 10px; font-size: 20px; opacity: .95; }
+/* EXPERIENCE */
+.card ul{
+  margin-top:12px;
+  padding-left:20px;
+}
+.card li{
+  margin-bottom:8px;
+  color:var(--muted);
+}
 
-    .links {
-      margin-top: 25px;
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+/* METRICS */
+.metrics{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
+}
+.metric{
+  text-align:center;
+  padding:25px;
+  background:var(--card);
+  border-radius:12px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+.metric h3{font-size:36px;color:var(--accent)}
 
-    .links a {
-      color: #fff;
-      text-decoration: none;
-      padding: 8px 16px;
-      border-radius: 30px;
-      border: 1px solid rgba(255,255,255,.3);
-      font-size: 14px;
-      transition: .3s;
-    }
+/* CAROUSEL */
+.carousel{
+  display:flex;
+  gap:15px;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  margin-top:15px;
+}
+.carousel img{
+  height:220px;
+  border-radius:10px;
+  border:1px solid var(--border);
+}
 
-    .links a:hover {
-      background: #fff;
-      color: #667eea;
-    }
+/* FOOTER */
+footer{
+  background:#020617;
+  color:#fff;
+  text-align:center;
+  padding:50px 30px;
+}
+footer a{
+  color:#93c5fd;
+  margin:0 10px;
+  text-decoration:none;
+}
 
-    nav {
-      position: sticky;
-      top: 0;
-      background: #f9fafb;
-      border-bottom: 1px solid #e5e7eb;
-      z-index: 100;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      padding: 14px 18px;
-      text-decoration: none;
-      color: #374151;
-      font-weight: 600;
-      font-size: 14px;
-    }
-
-    nav a:hover { color: #667eea; }
-
-    section {
-      padding: 70px 40px;
-      border-bottom: 1px solid #f1f5f9;
-    }
-
-    h2 {
-      font-size: 32px;
-      margin-bottom: 25px;
-      position: relative;
-    }
-
-    h2::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -10px;
-      width: 60px;
-      height: 4px;
-      background: linear-gradient(90deg,#667eea,#764ba2);
-      border-radius: 5px;
-    }
-
-    .card {
-      background: #fff;
-      padding: 28px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.08);
-      margin-bottom: 25px;
-      border-left: 4px solid #667eea;
-    }
-
-    .muted { color: #ffffffab; }
-
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-      gap: 25px;
-    }
-
-    .skill-box {
-      background: #f9fafb;
-      padding: 20px;
-      border-radius: 10px;
-      border-left: 3px solid #764ba2;
-      font-size: 14px;
-    }
-
-    .metrics {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
-      gap: 20px;
-    }
-
-    .metric {
-      text-align: center;
-      padding: 25px;
-      border-radius: 12px;
-      background: #fff;
-      box-shadow: 0 8px 25px rgba(0,0,0,.08);
-      border-top: 4px solid #667eea;
-    }
-
-    .metric h3 { font-size: 36px; color: #667eea; }
-
-    footer {
-      background: #0f172a;
-      color: #fff;
-      text-align: center;
-      padding: 50px 30px;
-    }
-
-    footer a {
-      color: #93c5fd;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    @media(max-width:768px){
-      header h1 { font-size: 34px; }
-      section { padding: 50px 25px; }
-    }
-  </style>
+@media(max-width:768px){
+  header h1{font-size:34px}
+  section{padding:50px 25px}
+}
+</style>
 </head>
 
 <body>
+
+<div class="toggle" onclick="toggleMode()">🌙 Mode</div>
 
 <div class="container">
 
 <header>
   <h1>Vaibhav Gupta</h1>
   <p>SEO Analyst & Data-Driven Digital Marketer</p>
-  <p class="muted">📍 Ahmedabad, India</p>
+  <p style="opacity:.85">📍 Ahmedabad, India</p>
 
   <div class="links">
+    <a href="assets/cv/Vaibhav-Gupta-SEO-CV.pdf" download>Download CV</a>
     <a href="mailto:vaibhavgupta7574@gmail.com">Email</a>
-    <a href="tel:+917574941273">Phone</a>
     <a href="https://www.linkedin.com/in/vaibhav-gupta-/" target="_blank">LinkedIn</a>
     <a href="https://x.com/gupta05_vaibhav" target="_blank">Twitter / X</a>
   </div>
 </header>
 
 <nav>
-  <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">SEO Work</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#metrics">Metrics</a></li>
-    <li><a href="#certs">Certifications</a></li>
-  </ul>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">SEO Work</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#metrics">Metrics</a></li>
+<li><a href="#certs">Certifications</a></li>
+</ul>
 </nav>
 
 <section id="about">
-  <h2>About Me</h2>
-  <div class="card">
-    <p>
-      I’m an SEO Analyst with 2.5+ years of hands-on experience driving organic growth through
-      keyword research, technical SEO, content optimization, and performance tracking.
-      I specialize in building scalable, search-first strategies aligned with modern
-      AI-driven search experiences (SGE & AI Overviews).
-    </p>
-  </div>
+<h2>About Me</h2>
+<div class="card">
+<p>
+SEO Analyst with 2.5+ years of experience building scalable organic growth systems.
+I work at the intersection of <strong>technical SEO, content strategy, and AI-driven search visibility</strong>,
+helping digital products grow sustainably across Google and emerging LLM ecosystems.
+</p>
+</div>
 </section>
 
 <section id="experience">
-  <h2>Professional Experience</h2>
+<h2>Professional Experience</h2>
 
-  <div class="card">
-    <h3>SEO Analyst — WrapPixel</h3>
-    <p class="muted">July 2024 – Present</p>
-    <ul>
-      <li>Keyword research & SERP analysis for SaaS UI & dashboard content</li>
-      <li>On-page optimization, internal linking & metadata improvements</li>
-      <li>Technical SEO audits (indexing, crawl, performance)</li>
-      <li>SEO content creation aligned with search intent</li>
-      <li>Performance tracking via GA4 & Google Search Console</li>
-    </ul>
-  </div>
+<div class="card">
+<h3>SEO Analyst — WrapPixel </h3>
+<p class="muted">July 2024 – Present</p>
+<ul>
+<li>Led end-to-end SEO strategy including keyword research, site architecture & internal linking</li>
+<li>Executed blog-led growth strategy aligned with commercial + informational search intent</li>
+<li>Improved crawl efficiency, indexing & Core Web Vitals via technical audits</li>
+<li>Built brand entity signals and authority through content & backlinks</li>
+<li>Tracked performance via GA4, GSC & Ahrefs</li>
+</ul>
+</div>
 
-  <div class="card">
-    <h3>Digital Marketing Executive — Amulya Mica</h3>
-    <p class="muted">July 2023 – June 2024</p>
-    <ul>
-      <li>On-page, off-page & technical SEO analysis</li>
-      <li>SEO recommendations for traffic & visibility growth</li>
-      <li>Email marketing & landing page optimization</li>
-    </ul>
-  </div>
+<div class="card">
+<h3>Digital Marketing Executive — Amulya Mica</h3>
+<p class="muted">July 2023 – June 2024</p>
+<ul>
+<li>Managed on-page, off-page & technical SEO activities</li>
+<li>Optimized landing pages for organic lead acquisition</li>
+<li>Supported email campaigns & CRO initiatives</li>
+</ul>
+</div>
 
-  <div class="card">
-    <h3>Marketing Intern — Krup Music</h3>
-    <p class="muted">Jan 2023 – May 2023</p>
-    <ul>
-      <li>Keyword research using Ahrefs & Google Keyword Planner</li>
-      <li>Backlink outreach & authority building support</li>
-    </ul>
-  </div>
+<div class="card">
+<h3>Marketing Intern — Krup Music</h3>
+<p class="muted">Jan 2023 – May 2023</p>
+<ul>
+<li>Performed keyword research & competitor analysis</li>
+<li>Supported backlink outreach & authority building</li>
+</ul>
+</div>
 </section>
 
 <section id="projects">
-  <h2>SEO Projects & Work</h2>
+<h2>SEO Projects & Work</h2>
 
-  <div class="card">
-    <h3>WrapPixel Blog SEO</h3>
-    <p>
-      Optimized long-form blog content targeting competitive UI, dashboard, and frontend
-      keywords. Improved search visibility through internal linking, content refresh,
-      and technical fixes.
-    </p>
-    <p class="muted">Metrics anonymized / blurred for confidentiality</p>
-  </div>
+<div class="card">
+<h3>WrapPixel — (B2B Digital Product Company)</h3>
+<p>
+Achieved <strong>115% traffic growth</strong> and <strong>+42,770 impressions (+97%)</strong>
+in ~70 days through restructuring, topical blogging, and entity-based SEO.
+</p>
+<div class="carousel">
+<img src="assets/images/ahrefs-nov.png">
+<img src="assets/images/ahrefs-jan.png">
+</div>
+</div>
 
-  <div class="card">
-    <h3>ShadcnSpace & Tailwind Admin</h3>
-    <p>
-      Early-stage SEO execution including keyword targeting, site structure improvements,
-      and backlink-led authority building for developer-focused platforms.
-    </p>
-  </div>
+<div class="card">
+<h3>Tailwindadmin (SaaS – Developer Product)</h3>
+<p>
+Scaled from zero to <strong>1.5K clicks</strong> and <strong>33K impressions</strong> in ~90 days,
+plus <strong>300+ LLM-driven sessions</strong> using topical content clusters & backlinks.
+</p>
+<div class="carousel">
+<img src="assets/images/tailwind-oct.png">
+<img src="assets/images/tailwind-oct-jan.png">
+<img src="assets/images/tailwindadmin-ss.png">
+</div>
+</div>
 
-  <div class="card">
-    <h3>Authority Content Distribution</h3>
-    <p>
-      Published SEO & dev-focused content on Dev.to, Medium, and Peerlist to build backlinks,
-      topical authority, and brand visibility.
-    </p>
-  </div>
+<div class="card">
+<h3>Authority Content Distribution</h3>
+<p>
+Distributed SEO content on Dev.to, Medium & Peerlist to accelerate indexing,
+build backlinks, and strengthen topical authority.
+</p>
+</div>
 </section>
+
 
 <section id="skills">
   <h2>Skills & Tools</h2>
@@ -284,48 +341,57 @@
   </div>
 </section>
 
-<section id="metrics">
-  <h2>Key Metrics</h2>
 
-  <div class="metrics">
-    <div class="metric"><h3>2.5+</h3><p>Years Experience</p></div>
-    <div class="metric"><h3>50+</h3><p>Pages Optimized</p></div>
-    <div class="metric"><h3>10+</h3><p>Websites Worked On</p></div>
-    <div class="metric"><h3>100+</h3><p>Keywords Tracked</p></div>
-  </div>
+<section id="metrics">
+<h2>Key Metrics</h2>
+<div class="metrics">
+<div class="metric"><h3>2.5+</h3><p>Years Experience</p></div>
+<div class="metric"><h3>100+</h3><p>Blogs Written & Optimized</p></div>
+<div class="metric"><h3>10+</h3><p>Websites Worked On</p></div>
+<div class="metric"><h3>100+</h3><p>Keywords Tracked</p></div>
+</div>
 </section>
 
 <section id="certs">
-  <h2>Certifications</h2>
+<h2>Certifications</h2>
 
-  <div class="card">Google Analytics Certification</div>
+<div class="card">Google Analytics Certification</div>
   <div class="card">HubSpot Digital Marketing</div>
   <div class="card">Google Digital Garage – Digital Marketing</div>
   <div class="card">DMI – Social Media & Digital Marketing</div>
+
 </section>
 
 </div>
 
 <footer>
-  <h3>Let’s Work Together</h3>
-  <p>Open to SEO roles, freelance projects & growth collaborations</p>
-  <p>
-    <a href="https://www.linkedin.com/in/vaibhav-gupta-/" target="_blank">LinkedIn</a> |
-    <a href="mailto:vaibhavgupta7574@gmail.com">Email</a>
-  </p>
-  <p style="opacity:.6;margin-top:10px;">© 2026 Vaibhav Gupta</p>
+<p>Open to SEO roles, freelance & growth collaborations</p>
+<p>
+<a href="https://www.linkedin.com/in/vaibhav-gupta-/" target="_blank">LinkedIn</a> |
+<a href="https://dev.to/vaibhavg" target="_blank">Dev.to</a> |
+<a href="https://medium.com/@ivaibhavgupta" target="_blank">Medium</a> |
+<a href="https://peerlist.io/vaibhavgupta" target="_blank">Peerlist</a>
+</p>
+<p style="opacity:.6;margin-top:10px;">© 2026 Vaibhav Gupta</p>
 </footer>
 
 <script>
-  document.querySelectorAll('nav a').forEach(link=>{
-    link.addEventListener('click',e=>{
-      e.preventDefault();
-      document.querySelector(link.getAttribute('href'))
-        .scrollIntoView({behavior:'smooth'});
-    });
+function toggleMode(){
+  document.body.classList.toggle('dark');
+}
+const sections=document.querySelectorAll("section");
+const navLinks=document.querySelectorAll("nav a");
+window.addEventListener("scroll",()=>{
+  let current="";
+  sections.forEach(sec=>{
+    const top=sec.offsetTop-100;
+    if(scrollY>=top) current=sec.id;
   });
+  navLinks.forEach(a=>{
+    a.classList.toggle("active",a.getAttribute("href").includes(current));
+  });
+});
 </script>
 
 </body>
 </html>
-
